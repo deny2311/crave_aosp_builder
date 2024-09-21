@@ -30,26 +30,27 @@ on:
       BUILD_DIFFERENT_ROM:
         description: "Command to initialize a different 'repo' project:"
         required: false
-        default: "echo 'Build Starting!'"
+        default: "repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 15 --git-lfs"
       REMOVALS:
         description: "Folders to be removed before syncing:"
         required: false
+        default: "external/chromium-webview"
       LOCAL_MANIFEST:
         description: "Personal local manifest [repository or raw]:"
         required: true
-        default: 'https://github.com/sounddrill31/local_manifests_oxygen'
+        default: 'https://github.com/denysaja/local_manifests'
       LOCAL_MANIFEST_BRANCH:
         description: "Personal local manifest's branch:"
         required: false
-        default: 'lineage-21-qpr3'
+        default: 'pixelage-15'
       DEVICE_NAME:
         description: "Device's codename:"
         required: true
-        default: "oxygen"
+        default: "sagit"
       PRODUCT_NAME:
         description: "Product to build:"
         required: true
-        default: "oxygen"
+        default: "pixelage_sagit-ap3a"
       BUILD_COMMAND:
         description: 'Command to be used for compiling:'
         required: true
@@ -482,6 +483,7 @@ jobs:
         # Set up build environment
         export BUILD_USERNAME=${{ github.actor }} ; \
         export BUILD_HOSTNAME=crave ; \
+        export PIXELAGE_BUILD="sagit" ; \
         source build/envsetup.sh && \
 
         echo "Repository: ${{ github.repository }}"; \
