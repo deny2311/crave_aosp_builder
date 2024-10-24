@@ -30,11 +30,10 @@ on:
       BUILD_DIFFERENT_ROM:
         description: "Command to initialize a different 'repo' project:"
         required: false
-        default: "repo init -u https://github.com/Sagit-A15/android_manifest.git -b 15 --git-lfs"
+        default: "repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 15 --git-lfs"
       REMOVALS:
         description: "Folders to be removed before syncing:"
         required: false
-        default: "external/chromium-webview"
       LOCAL_MANIFEST:
         description: "Personal local manifest [repository or raw]:"
         required: true
@@ -58,7 +57,7 @@ on:
       BUILD_TYPE:
         description: 'Type of build:'
         required: true
-        default: 'userdebug'
+        default: 'user'
         type: choice
         options: 
         - 'eng'
