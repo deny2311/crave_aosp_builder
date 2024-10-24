@@ -57,7 +57,7 @@ on:
       BUILD_TYPE:
         description: 'Type of build:'
         required: true
-        default: 'user'
+        default: 'userdebug'
         type: choice
         options: 
         - 'eng'
