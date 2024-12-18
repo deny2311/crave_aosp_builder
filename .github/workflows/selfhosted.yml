@@ -42,15 +42,15 @@ on:
       LOCAL_MANIFEST_BRANCH:
         description: "Personal local manifest's branch:"
         required: false
-        default: 'pixelage-15-su'
+        default: 'pixelage-15-su-chiron'
       DEVICE_NAME:
         description: "Device's codename:"
         required: true
-        default: "sagit"
+        default: "chiron"
       PRODUCT_NAME:
         description: "Product to build:"
         required: true
-        default: "pixelage_sagit-ap4a"
+        default: "pixelage_chiron-ap4a"
       BUILD_COMMAND:
         description: 'Command to be used for compiling:'
         required: true
